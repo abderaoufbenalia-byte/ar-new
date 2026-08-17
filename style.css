@@ -1,0 +1,1172 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Outfit:wght@500;600;700;800&display=swap");
+:root{--bg:#060808;--panel:#0b1010;--panel2:#0f1514;--stroke:#202a26;--green:#6dff52;--green2:#42dc3e;--text:#f4f7f4;--muted:#8e9993}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;color:var(--text);background:radial-gradient(circle at 72% 0,#53ff4a12,transparent 30%),var(--bg);font-family:"DM Sans",Arial,sans-serif}body:before{content:"";position:fixed;inset:0;z-index:-1;opacity:.12;background-image:linear-gradient(#fff 1px,transparent 1px),linear-gradient(90deg,#fff 1px,transparent 1px);background-size:72px 72px;mask-image:linear-gradient(to bottom,#000,transparent 58%);pointer-events:none}a{text-decoration:none;color:inherit}
+.top{height:72px;position:sticky;top:0;z-index:100;display:flex;align-items:center;gap:26px;padding:0 2.6%;background:#060909ef;border-bottom:1px solid #1b2420;backdrop-filter:blur(18px)}.brand{width:235px;height:60px;display:flex;align-items:center;gap:8px}.brand .brand-mark{width:48px!important;height:48px!important;object-fit:contain!important;filter:drop-shadow(0 0 13px #59ff4a36)}.brand>span{font:800 20px Outfit;color:#76ff55;white-space:nowrap}.topnav{display:flex;align-items:center;gap:3px;flex:1}.topnav a{font:700 11px Outfit;padding:10px 14px;color:#dce7df}.tools{display:flex;gap:8px;align-items:center}.search{width:245px;height:41px;display:flex;align-items:center;gap:8px;padding:0 12px;background:#0b100f;border:1px solid #27312d;border-radius:10px;color:#77827b}.search input{width:100%;border:0;outline:0;background:transparent;color:#fff;font-size:12px}.langbox{position:relative}.langbox>button{height:41px;padding:0 12px;border:1px solid #27312d;border-radius:10px;background:#0b100f;color:#fff;cursor:pointer}.lang-menu{display:none;position:absolute;right:0;top:47px;width:175px;padding:6px;background:#0b100f;border:1px solid #2b3731;border-radius:12px;box-shadow:0 20px 60px #000b;z-index:120}.lang-menu.show{display:block}.lang-menu button{width:100%;padding:10px;border:0;background:transparent;color:#fff;text-align:left;border-radius:8px;cursor:pointer}.lang-menu button:hover{background:#162017;color:var(--green)}
+
+main{width:min(1500px,96%);margin:0 auto;padding-bottom:65px;display:grid;grid-template-columns:210px minmax(0,1fr) 176px;gap:18px}.sidebar{position:sticky;top:84px;height:calc(100vh - 99px);overflow:auto;padding:12px 9px;background:#080d0d;border:1px solid #202a26;border-radius:14px}.side-brand{height:52px;margin:0 7px 8px;display:flex;align-items:center;gap:7px;border-bottom:1px solid #1e2824}.side-brand .brand-mark{width:34px;height:34px;object-fit:contain}.side-brand>span{font:800 12px Outfit;color:#76ff55;white-space:nowrap}.side-menu{display:flex;flex-direction:column;gap:3px}.side-item{width:100%;display:flex;align-items:center;gap:11px;padding:9px 10px;border:0;background:transparent;color:#9da7a1;border-radius:9px;cursor:pointer;text-align:left;font:600 10.5px "DM Sans"}.side-item:hover{background:#111814;color:#fff}.side-item.active{background:linear-gradient(90deg,#152919,#101812);color:var(--green);box-shadow:inset 2px 0 var(--green)}.ico{width:21px;text-align:center;color:inherit;font-size:16px}.side-divider{height:1px;background:#1e2824;margin:13px 10px}.side-label{font-size:8.5px;color:#67736c;letter-spacing:1.5px;font-weight:800;padding:0 10px 7px}#catList{display:flex;flex-direction:column;gap:2px}.cat{width:100%;display:flex;align-items:center;gap:9px;padding:8px 10px;border:0;background:transparent;color:#909a94;text-align:left;border-radius:8px;cursor:pointer;font-size:10px}.cat:before{content:"";width:18px;height:18px;border:1px solid #3e7c3f;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;flex:0 0 18px}.cat:hover{background:#111814;color:#fff}.cat.active{background:#122018;color:var(--green);font-weight:800}.cat.active:before{content:"✓";font-size:9px;background:#18301b}.side-ad{height:118px;margin:15px 3px;border-radius:10px}.stats{text-align:center;padding:12px 4px;border:1px solid #202a26;border-radius:10px;margin:7px 3px}.stats b{display:block;color:var(--green);font:800 20px Outfit}.stats small{font-size:7px;color:#66726b}
+.content{min-width:0}.hero{height:245px;position:relative;overflow:hidden;border:1px solid #315b35;border-radius:16px;background:linear-gradient(100deg,#0e1812 0%,#0a110d 48%,#0e1910 100%);box-shadow:0 22px 65px #0008}.hero:before{content:"";position:absolute;inset:0;background:radial-gradient(circle at 72% 48%,#6dff522b,transparent 27%),linear-gradient(90deg,#08100b88,transparent 60%)}.hero-copy{position:relative;z-index:3;padding:42px 6.5%}.hero-copy>span{font-size:8px;letter-spacing:3px;color:var(--green);font-weight:900}.hero h1{margin:2px 0 0;font:800 clamp(48px,5.2vw,72px) Outfit;letter-spacing:-4px;line-height:.94}.hero p{margin:9px 0 18px;color:var(--muted)}.primary{background:var(--green);color:#071008;box-shadow:0 8px 25px #6dff5225}.secondary{border:1px solid #34443a;background:#0c1310;color:#e9efea}.hero-art{position:absolute;inset:0;pointer-events:none}.hero-glow{position:absolute;right:11%;top:20px;width:270px;height:205px;border-radius:50%;background:#59ff4b20;filter:blur(25px)}.hero-logo{position:absolute;right:27%;top:39px;width:125px;height:150px;object-fit:contain;filter:drop-shadow(0 0 20px #5dff4d4d);opacity:.65}.hero-game-image{position:absolute;right:2%;top:13px;width:42%;height:219px;object-fit:cover;border-radius:16px;opacity:.8;mask-image:linear-gradient(90deg,transparent 0%,#000 18%,#000 100%);filter:saturate(1.12) contrast(1.05)}.inline-ad{height:50px;margin:12px 0;border-radius:9px}.section{margin-top:23px}.section-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px}.section-head h2{margin:0;font:700 17px Outfit}.view-all{font-size:8px;color:var(--green);border:1px solid #2d4a31;border-radius:8px;padding:7px 9px}.online{font-size:8px;color:var(--green)}.grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:9px}.card{min-width:0;position:relative;overflow:hidden;border:1px solid #223128;background:#0c1110;border-radius:11px;transition:transform .22s,border-color .22s,box-shadow .22s}.card:before,.card:after{content:"";position:absolute;z-index:5;pointer-events:none;width:42%;height:2px;background:linear-gradient(90deg,transparent,var(--green),transparent);filter:drop-shadow(0 0 5px var(--green));opacity:0;transform-origin:left center}.card:before{top:0;left:0;animation:orbit1 2.8s linear infinite}.card:after{bottom:0;right:0;transform-origin:right center;animation:orbit2 2.8s linear infinite}.card:hover{transform:translateY(-4px);border-color:#4c814a;box-shadow:0 18px 36px #000b}.card:hover:before,.card:hover:after{opacity:1}.thumb{height:122px;position:relative;overflow:hidden;background:#131918}.thumb img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .35s ease,filter .35s}.card:hover .thumb img{transform:scale(1.08);filter:brightness(1.06) saturate(1.2)}.thumb:after{content:"";position:absolute;inset:48% 0 0;background:linear-gradient(transparent,#070a09f0)}.hover-name{position:absolute;z-index:4;left:8px;right:8px;bottom:8px;color:#fff;font:800 10px Outfit;text-shadow:0 2px 10px #000;opacity:0;transform:translateY(6px);transition:.25s;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.card:hover .hover-name{opacity:1;transform:none}.badge{position:absolute;z-index:6;top:6px;left:6px;padding:4px 6px;border-radius:5px;background:#071009ed;border:1px solid #3b7b3e;color:var(--green);font-size:6px;font-weight:900}.info{padding:7px 8px 9px}.info h3{margin:0 0 5px;font:700 10px Outfit;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.meta{display:flex;justify-content:space-between;gap:3px;color:#69746e;font-size:7px}.meta span:last-child{color:#9daaa2}.bottom-ad{height:72px;margin-top:18px;border-radius:9px}.right-rail{padding-top:277px}.rail-ad{height:310px;border-radius:11px}.rail-ad.second{height:180px;margin-top:12px}.rail-points{margin:12px 0;padding:11px;border:1px solid #202a26;border-radius:11px;background:#0a100d;display:flex;flex-direction:column;gap:12px}.rail-points div{display:grid;grid-template-columns:22px 1fr;column-gap:4px;color:var(--green);font-size:16px}.rail-points b{font:700 9px Outfit;align-self:end}.rail-points small{grid-column:2;color:#6f7a73;font-size:7px}.footer,footer{border-top:1px solid #1e2824;padding:22px;text-align:center;color:#69756e;font-size:9px;background:#070909}
+@keyframes orbit1{0%{left:-45%;top:0;transform:rotate(0deg)}25%{left:100%;top:0;transform:rotate(0deg)}50%{left:100%;top:100%;transform:rotate(90deg)}75%{left:-45%;top:100%;transform:rotate(180deg)}100%{left:-45%;top:0;transform:rotate(360deg)}}@keyframes orbit2{0%{right:-45%;bottom:0;transform:rotate(0deg)}25%{right:100%;bottom:0;transform:rotate(0deg)}50%{right:100%;bottom:100%;transform:rotate(90deg)}75%{right:-45%;bottom:100%;transform:rotate(180deg)}100%{right:-45%;bottom:0;transform:rotate(360deg)}}
+@media(max-width:1200px){main{grid-template-columns:190px minmax(0,1fr)}.right-rail{display:none}.grid{grid-template-columns:repeat(5,minmax(0,1fr))}.topnav a{padding-inline:9px}.search{width:200px}}@media(max-width:900px){.topnav{display:none}.grid{grid-template-columns:repeat(4,minmax(0,1fr))}}@media(max-width:760px){.top{height:auto;min-height:64px;padding:7px 10px;gap:7px;flex-wrap:wrap}.brand{width:150px;height:50px}.tools{margin-left:auto}.search{width:145px}.sidebar{position:static;height:auto;display:block;overflow-x:auto;padding:8px}.side-brand{display:none}.primary-menu{display:flex;flex-direction:row;gap:4px}.side-item{width:auto;white-space:nowrap;background:#0f1512}.side-item .ico{font-size:14px}.side-divider,.side-label,.side-ad,.stats{display:none}#catList{display:flex;flex-direction:row;gap:4px;overflow-x:auto;margin-top:5px}.cat{width:auto;white-space:nowrap;background:#0f1512}.content{margin-top:10px}.hero{height:210px}.hero-copy{padding:37px 7%}.hero h1{font-size:49px}.hero-logo{right:25%;width:105px}.hero-game-image{width:48%;height:190px;right:-2%}.grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.thumb{height:120px}.inline-ad{height:42px}.section{margin-top:21px}}@media(max-width:430px){.brand{width:130px}.search{width:128px}.hero{height:200px}.hero h1{font-size:43px}.hero-logo{width:90px;right:24%}.hero-game-image{width:46%;height:175px}.hero-buttons a{padding:9px 10px}.grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+/* ===== v4 category sidebar cleanup ===== */
+.sidebar{overflow:hidden}
+.sidebar::-webkit-scrollbar{display:none}
+.sidebar{scrollbar-width:none}
+.primary-menu,.side-divider{display:none!important}
+.side-label{font-size:9px!important;letter-spacing:2px!important;color:#78847c!important;padding:10px 12px 10px!important}
+#catList{gap:3px!important;max-height:520px;overflow:hidden}
+.cat{padding:10px 9px!important;border-radius:10px!important;gap:11px!important;font-size:10.5px!important}
+.cat:before{display:none!important}
+.cat .cat-icon{width:28px;height:28px;display:flex;align-items:center;justify-content:center;color:#6dff52;font-size:19px;flex:0 0 28px;filter:drop-shadow(0 0 5px #6dff5235)}
+.cat:hover .cat-icon,.cat.active .cat-icon{color:#8aff6e}
+.cat.active{background:linear-gradient(90deg,#13231a,#0f1712)!important;color:var(--green)!important;box-shadow:inset 2px 0 var(--green),0 8px 22px #0005!important}
+.cat.active .cat-icon{font-size:20px}
+.more-cats{width:100%;margin-top:8px;padding:9px 10px;border:1px solid #26362a;border-radius:9px;background:#0c120e;color:#83a18a;cursor:pointer;font-size:9px;font-weight:800}
+.more-cats:hover{color:var(--green);border-color:#3e7540;background:#111a13}
+.sidebar .side-ad{display:none}
+.sidebar .stats{margin-top:14px}
+/* Modern, no-visible-scrollbar sidebar on mobile too */
+@media(max-width:760px){
+  .sidebar{overflow:hidden;display:block}
+  #catList{display:grid!important;grid-template-columns:repeat(2,1fr);max-height:240px;overflow:hidden}
+  .cat{width:auto!important}
+  .more-cats{display:block}
+}
+/* ===== v4 game-card hover treatment ===== */
+.card{position:relative;border-color:#233027;overflow:visible!important}
+.thumb{border-radius:12px;overflow:hidden}
+.card .info{position:absolute;left:7px;right:7px;bottom:7px;z-index:5;padding:9px 10px 8px;border-radius:9px;background:linear-gradient(180deg,#06100800,#061008ee 30%);opacity:0;transform:translateY(8px);transition:opacity .22s ease,transform .22s ease;pointer-events:none}
+.card:hover .info{opacity:1;transform:translateY(0)}
+.card .info h3{font-size:12px;text-shadow:0 2px 8px #000;margin:0 0 3px}
+.card .meta{font-size:8px;color:#c0cec4}
+.card:hover .thumb img{transform:scale(1.08)}
+.card:before,.card:after{content:"";position:absolute;z-index:7;pointer-events:none;opacity:0;transition:opacity .18s ease}
+.card:before{inset:-2px; border-top:2px solid #6dff52;border-bottom:2px solid #2ee85a;border-radius:13px;clip-path:polygon(0 0,100% 0,100% 7%,0 7%,0 93%,100% 93%,100% 100%,0 100%);animation:cardLinesA 2.2s linear infinite}
+.card:after{inset:-2px; border-left:2px solid #3dff74;border-right:2px solid #8aff55;border-radius:13px;clip-path:polygon(0 0,7% 0,7% 100%,0 100%,93% 100%,100% 100%,100% 0,93% 0);animation:cardLinesB 1.8s linear infinite}
+.card:hover:before,.card:hover:after{opacity:1}
+@keyframes cardLinesA{0%{transform:translateX(-1px)}50%{transform:translateX(1px)}100%{transform:translateX(-1px)}}
+@keyframes cardLinesB{0%{transform:translateY(1px)}50%{transform:translateY(-1px)}100%{transform:translateY(1px)}}
+@media(hover:none){.card .info{opacity:1;transform:none}.card:before,.card:after{display:none}}
+
+/* v4.1 game visibility fallback */
+.grid{min-height:80px}
+.card .thumb{background:linear-gradient(135deg,#0d1b12,#08100b);min-height:150px}
+.card .thumb img{display:block;width:100%;height:100%;object-fit:cover;transition:transform .28s ease,opacity .2s}
+
+/* ===== ARGAMES 2026 RANDOM MOSAIC + PAGINATION ===== */
+.catalog-sub{margin:5px 0 0;color:#69756e;font-size:9px;letter-spacing:.35px}
+.catalog-sub #catalogCount{color:#6dff52;font-weight:800}
+.mosaic-grid{display:grid!important;grid-template-columns:repeat(6,minmax(0,1fr));grid-auto-rows:92px;grid-auto-flow:dense;gap:12px}
+.mosaic-grid .card{min-width:0;min-height:0;height:100%;grid-column:span 1;grid-row:span 2}
+.mosaic-grid .card.tile-wide{grid-column:span 2;grid-row:span 2}
+.mosaic-grid .card.tile-tall{grid-column:span 1;grid-row:span 3}
+.mosaic-grid .card.tile-feature{grid-column:span 2;grid-row:span 3}
+.mosaic-grid .card .thumb{height:100%;min-height:0;border-radius:12px}
+.mosaic-grid .card .thumb img{width:100%;height:100%;object-fit:cover}
+.mosaic-grid .card .info{display:none}
+.mosaic-grid .card .hover-name{position:absolute;left:0;right:0;bottom:0;padding:32px 11px 10px;background:linear-gradient(transparent,#020603e8);font:800 12px Outfit;color:#fff;opacity:0;transform:translateY(8px);transition:.22s ease;z-index:4}
+.mosaic-grid .card:hover .hover-name{opacity:1;transform:none}
+.mosaic-grid .card .thumb:after{content:"";position:absolute;inset:0;border-radius:12px;pointer-events:none;background:linear-gradient(135deg,#6dff5208,transparent 50%,#0003)}
+.mosaic-grid .badge{z-index:6}
+.pagination{display:flex;justify-content:center;align-items:center;gap:7px;padding:25px 0 8px;flex-wrap:wrap}
+.page-btn,.page-arrow{min-width:35px;height:35px;border:1px solid #29362f;background:#0a100e;color:#9da9a1;border-radius:9px;font:800 11px Outfit;cursor:pointer}
+.page-btn:hover,.page-arrow:hover{border-color:#52ed4b;color:#6dff52;background:#111b14}
+.page-btn.active{background:#16341a;border-color:#6dff52;color:#6dff52;box-shadow:0 0 18px #58ff5520}
+.page-btn:disabled,.page-arrow:disabled{opacity:.35;cursor:default}
+.ellipsis{color:#56635b;padding:0 2px}
+@media(max-width:1200px){
+ .mosaic-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
+}
+@media(max-width:850px){
+ .mosaic-grid{grid-template-columns:repeat(3,minmax(0,1fr));grid-auto-rows:86px;gap:9px}
+ .mosaic-grid .card.tile-feature{grid-column:span 2}
+}
+@media(max-width:560px){
+ .mosaic-grid{grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:105px}
+ .mosaic-grid .card.tile-tall{grid-row:span 2}
+ .mosaic-grid .card.tile-feature{grid-column:span 2;grid-row:span 2}
+ .mosaic-grid .card .hover-name{opacity:1;transform:none;font-size:10px;padding:27px 8px 7px}
+ .pagination{gap:5px}
+ .page-btn,.page-arrow{min-width:32px;height:32px}
+}
+
+.seo-intro{margin:22px 0;padding:18px 20px;border:1px solid #1d2a20;border-radius:14px;background:#0a100c}.seo-intro h2{margin:0 0 7px;font:700 17px Outfit;color:#dfe8e1}.seo-intro p{margin:0;color:#829087;font-size:9.5px;line-height:1.7;max-width:980px}.seo-category-links{display:flex;flex-wrap:wrap;gap:7px;margin-top:12px}.seo-category-links a{font-size:8px;color:#8fd68b;border:1px solid #263b2a;border-radius:99px;padding:6px 9px;text-decoration:none}.seo-category-links a:hover{color:#6dff52;border-color:#4a814a}.pagination a{display:inline-flex;align-items:center;justify-content:center;text-decoration:none}.pagination .page-btn.active{color:#061007;background:#6dff52}
+
+/* =========================================================
+   ARGAMES LAYOUT FIX v5
+   1) Category pages: don't inherit the 3-column site <main> grid.
+   2) Mosaic catalog: masonry-style columns eliminate large empty holes.
+   ========================================================= */
+
+/* Category pages were using the global main{display:grid;...} rule.
+   This caused their content to collapse into the 210px sidebar column. */
+main.cat-page{
+  display:block !important;
+  width:min(1200px,96%) !important;
+  max-width:1200px !important;
+  margin:0 auto !important;
+  padding:28px 0 65px !important;
+  min-width:0 !important;
+}
+.cat-page h1{
+  margin:8px 0 10px !important;
+  text-align:left !important;
+  font-size:clamp(34px,5vw,52px) !important;
+}
+.cat-page p{max-width:900px}
+.cat-grid{
+  width:100% !important;
+  display:grid !important;
+  grid-template-columns:repeat(6,minmax(0,1fr)) !important;
+  gap:12px !important;
+}
+.cat-game{min-width:0}
+.cat-game img{width:100%;height:150px;object-fit:cover}
+
+/* Masonry-like catalog: cards flow vertically without the giant
+   blank spaces produced by mixed CSS grid row-spans. */
+.mosaic-grid{
+  display:block !important;
+  column-count:6 !important;
+  column-gap:12px !important;
+  column-fill:auto !important;
+  height:auto !important;
+}
+.mosaic-grid .card{
+  display:block !important;
+  width:100% !important;
+  height:auto !important;
+  min-height:0 !important;
+  margin:0 0 12px !important;
+  break-inside:avoid !important;
+  -webkit-column-break-inside:avoid !important;
+  page-break-inside:avoid !important;
+  grid-column:auto !important;
+  grid-row:auto !important;
+}
+.mosaic-grid .card .thumb{
+  width:100% !important;
+  height:180px !important;
+  min-height:0 !important;
+}
+.mosaic-grid .card.tile-wide .thumb{height:225px !important}
+.mosaic-grid .card.tile-tall .thumb{height:285px !important}
+.mosaic-grid .card.tile-feature .thumb{height:335px !important}
+.mosaic-grid .card .info{display:none !important}
+
+/* Keep the green orbit/shimmer effect working on the new masonry cards. */
+.mosaic-grid .card:before,.mosaic-grid .card:after{
+  z-index:8 !important;
+}
+
+/* Avoid an artificial "bottom of a grid row" gap. */
+.mosaic-grid:after{content:none !important}
+
+@media(max-width:1200px){
+  .mosaic-grid{column-count:4 !important}
+  .cat-grid{grid-template-columns:repeat(4,minmax(0,1fr)) !important}
+}
+@media(max-width:850px){
+  .mosaic-grid{column-count:3 !important;column-gap:9px !important}
+  .mosaic-grid .card{margin-bottom:9px !important}
+  .mosaic-grid .card .thumb{height:170px !important}
+  .mosaic-grid .card.tile-wide .thumb{height:205px !important}
+  .mosaic-grid .card.tile-tall .thumb{height:245px !important}
+  .mosaic-grid .card.tile-feature .thumb{height:285px !important}
+  .cat-grid{grid-template-columns:repeat(3,minmax(0,1fr)) !important}
+}
+@media(max-width:600px){
+  main.cat-page{width:94% !important;padding-top:18px !important}
+  .cat-grid{grid-template-columns:repeat(2,minmax(0,1fr)) !important;gap:9px !important}
+  .cat-game img{height:125px}
+  .mosaic-grid{column-count:2 !important;column-gap:9px !important}
+  .mosaic-grid .card .thumb{height:180px !important}
+  .mosaic-grid .card.tile-wide .thumb{height:210px !important}
+  .mosaic-grid .card.tile-tall .thumb{height:245px !important}
+  .mosaic-grid .card.tile-feature .thumb{height:280px !important}
+}
+
+/* =========================================================
+   ARGAMES FINAL MOSAIC FIX
+   Fix: cards previously collapsed into the first column because
+   column-fill:auto was used with an auto-height container.
+   ========================================================= */
+#popularGrid.mosaic-grid{
+  display:block !important;
+  width:100% !important;
+  height:auto !important;
+  min-height:0 !important;
+  column-count:6 !important;
+  column-gap:12px !important;
+  column-fill:balance !important;
+  column-width:auto !important;
+}
+#popularGrid.mosaic-grid .card{
+  display:block !important;
+  width:100% !important;
+  height:auto !important;
+  min-height:0 !important;
+  margin:0 0 12px !important;
+  break-inside:avoid !important;
+  -webkit-column-break-inside:avoid !important;
+  page-break-inside:avoid !important;
+  grid-column:auto !important;
+  grid-row:auto !important;
+  overflow:hidden !important;
+  vertical-align:top;
+}
+#popularGrid.mosaic-grid .card .thumb{
+  width:100% !important;
+  height:190px !important;
+  min-height:0 !important;
+  aspect-ratio:1.42 / 1;
+}
+#popularGrid.mosaic-grid .card.tile-wide .thumb{height:230px !important}
+#popularGrid.mosaic-grid .card.tile-tall .thumb{height:285px !important}
+#popularGrid.mosaic-grid .card.tile-feature .thumb{height:330px !important}
+
+#popularGrid.mosaic-grid .card .hover-name{
+  opacity:0;
+  transform:translateY(8px);
+}
+#popularGrid.mosaic-grid .card:hover .hover-name{
+  opacity:1;
+  transform:translateY(0);
+}
+#popularGrid.mosaic-grid .card .info{display:none !important}
+
+/* Keep the two green orbit lights visible during hover. */
+#popularGrid.mosaic-grid .card:hover:before,
+#popularGrid.mosaic-grid .card:hover:after{opacity:1 !important}
+
+/* Responsive masonry */
+@media (max-width:1200px){
+  #popularGrid.mosaic-grid{column-count:4 !important;column-gap:10px !important}
+  #popularGrid.mosaic-grid .card .thumb{height:185px !important}
+  #popularGrid.mosaic-grid .card.tile-wide .thumb{height:220px !important}
+  #popularGrid.mosaic-grid .card.tile-tall .thumb{height:270px !important}
+  #popularGrid.mosaic-grid .card.tile-feature .thumb{height:310px !important}
+}
+@media (max-width:850px){
+  #popularGrid.mosaic-grid{column-count:3 !important;column-gap:9px !important}
+  #popularGrid.mosaic-grid .card{margin-bottom:9px !important}
+  #popularGrid.mosaic-grid .card .thumb{height:165px !important}
+  #popularGrid.mosaic-grid .card.tile-wide .thumb{height:195px !important}
+  #popularGrid.mosaic-grid .card.tile-tall .thumb{height:245px !important}
+  #popularGrid.mosaic-grid .card.tile-feature .thumb{height:275px !important}
+}
+@media (max-width:560px){
+  #popularGrid.mosaic-grid{column-count:2 !important;column-gap:8px !important}
+  #popularGrid.mosaic-grid .card{margin-bottom:8px !important}
+  #popularGrid.mosaic-grid .card .thumb{height:150px !important}
+  #popularGrid.mosaic-grid .card.tile-wide .thumb{height:175px !important}
+  #popularGrid.mosaic-grid .card.tile-tall .thumb{height:210px !important}
+  #popularGrid.mosaic-grid .card.tile-feature .thumb{height:235px !important}
+}
+
+/* Normal sections stay as compact grids. */
+#newGrid,#multiGrid,#topGrid{
+  display:grid !important;
+}
+
+/* Category pages: full-width game area */
+body.category-page main{
+  width:min(1500px,96%) !important;
+  grid-template-columns:210px minmax(0,1fr) !important;
+}
+body.category-page .right-rail{display:none !important}
+body.category-page .content{min-width:0 !important}
+body.category-page .grid{
+  width:100% !important;
+}
+
+/* =========================================================
+   ARGAMES HOME PAGE - DEFINITIVE GAME GRID FIX
+   The previous CSS-columns masonry could keep cards in the
+   first column in some browsers. Use CSS Grid instead.
+   ========================================================= */
+#popularGrid.mosaic-grid{
+  display:grid !important;
+  width:100% !important;
+  height:auto !important;
+  min-height:0 !important;
+  grid-template-columns:repeat(6,minmax(0,1fr)) !important;
+  grid-auto-rows:190px !important;
+  grid-auto-flow:dense !important;
+  gap:12px !important;
+  align-items:stretch !important;
+}
+#popularGrid.mosaic-grid .card{
+  display:block !important;
+  width:auto !important;
+  height:auto !important;
+  min-width:0 !important;
+  min-height:0 !important;
+  margin:0 !important;
+  grid-column:span 1 !important;
+  grid-row:span 1 !important;
+  break-inside:auto !important;
+}
+#popularGrid.mosaic-grid .card.tile-wide{
+  grid-column:span 2 !important;
+  grid-row:span 1 !important;
+}
+#popularGrid.mosaic-grid .card.tile-tall{
+  grid-column:span 1 !important;
+  grid-row:span 2 !important;
+}
+#popularGrid.mosaic-grid .card.tile-feature{
+  grid-column:span 2 !important;
+  grid-row:span 2 !important;
+}
+#popularGrid.mosaic-grid .card .thumb{
+  width:100% !important;
+  height:100% !important;
+  min-height:0 !important;
+  aspect-ratio:auto !important;
+}
+#popularGrid.mosaic-grid .card .thumb img{
+  width:100% !important;
+  height:100% !important;
+  object-fit:cover !important;
+}
+#popularGrid.mosaic-grid .card .info{display:none !important}
+
+/* Keep the hover-only title and green orbit lines. */
+#popularGrid.mosaic-grid .card .hover-name{
+  opacity:0 !important;
+  transform:translateY(8px) !important;
+}
+#popularGrid.mosaic-grid .card:hover .hover-name{
+  opacity:1 !important;
+  transform:translateY(0) !important;
+}
+#popularGrid.mosaic-grid .card:hover:before,
+#popularGrid.mosaic-grid .card:hover:after{
+  opacity:1 !important;
+}
+
+/* Desktop: use the whole available content width. */
+@media (min-width:1201px){
+  #popularGrid.mosaic-grid{
+    grid-template-columns:repeat(6,minmax(0,1fr)) !important;
+    grid-auto-rows:185px !important;
+  }
+}
+@media (max-width:1200px) and (min-width:901px){
+  #popularGrid.mosaic-grid{
+    grid-template-columns:repeat(4,minmax(0,1fr)) !important;
+    grid-auto-rows:180px !important;
+    gap:10px !important;
+  }
+}
+@media (max-width:900px) and (min-width:561px){
+  #popularGrid.mosaic-grid{
+    grid-template-columns:repeat(3,minmax(0,1fr)) !important;
+    grid-auto-rows:175px !important;
+    gap:9px !important;
+  }
+}
+@media (max-width:560px){
+  #popularGrid.mosaic-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+    grid-auto-rows:155px !important;
+    gap:8px !important;
+  }
+  #popularGrid.mosaic-grid .card.tile-feature{
+    grid-column:span 2 !important;
+    grid-row:span 2 !important;
+  }
+}
+
+/* Ensure the home content itself can expand normally. */
+body:not(.category-page) main .content{
+  min-width:0 !important;
+  width:100% !important;
+}
+body:not(.category-page) #popular{
+  width:100% !important;
+}
+
+/* =========================================================
+   ARGAMES MOBILE / PHONE DEFINITIVE FIX
+   On phones the desktop 190px sidebar column was still active,
+   pushing .content into a second narrow column. Stack everything.
+   ========================================================= */
+@media (max-width:760px){
+  html,body{width:100%;max-width:100%;overflow-x:hidden}
+  main{
+    width:100% !important;
+    max-width:none !important;
+    margin:0 !important;
+    padding:0 10px 45px !important;
+    display:grid !important;
+    grid-template-columns:1fr !important;
+    gap:10px !important;
+  }
+  .sidebar{
+    grid-column:1 !important;
+    width:100% !important;
+    max-width:none !important;
+    min-width:0 !important;
+    height:auto !important;
+    max-height:none !important;
+    overflow:hidden !important;
+    border-radius:12px !important;
+    padding:7px !important;
+    order:1 !important;
+  }
+  .content{
+    grid-column:1 !important;
+    width:100% !important;
+    min-width:0 !important;
+    max-width:none !important;
+    margin-top:0 !important;
+    order:2 !important;
+  }
+  .right-rail{display:none !important}
+
+  /* Compact category strip: no giant sidebar on mobile. */
+  #catList{
+    width:100% !important;
+    max-width:none !important;
+    display:grid !important;
+    grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+    gap:6px !important;
+    max-height:132px !important;
+    overflow:hidden !important;
+  }
+  .cat{
+    width:100% !important;
+    min-width:0 !important;
+    justify-content:flex-start !important;
+    padding:9px 10px !important;
+    font-size:10px !important;
+  }
+  .cat .cat-icon{
+    width:24px !important;
+    height:24px !important;
+    flex-basis:24px !important;
+    font-size:17px !important;
+  }
+  .more-cats{margin-top:6px !important}
+
+  
+  .hero{
+    width:100% !important;
+    max-width:none !important;
+    height:205px !important;
+  }
+  .hero-copy{padding:32px 6% !important}
+  .hero h1{font-size:42px !important;letter-spacing:-2px !important}
+  .hero-game-image{width:47% !important;right:-3% !important}
+  .hero-logo{right:25% !important}
+
+  /* Game grid must occupy the complete phone width. */
+  #popularGrid.mosaic-grid{
+    width:100% !important;
+    grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+    grid-auto-rows:155px !important;
+    gap:8px !important;
+  }
+  #popularGrid.mosaic-grid .card{min-width:0 !important}
+  #popularGrid.mosaic-grid .card .thumb{height:100% !important}
+}
+
+@media (max-width:430px){
+  main{padding-left:8px !important;padding-right:8px !important}
+  .brand{width:132px !important}
+  .tools{gap:5px !important}
+  .search{width:min(142px,42vw) !important}
+  .hero{height:195px !important}
+  .hero h1{font-size:39px !important}
+  #popularGrid.mosaic-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+    grid-auto-rows:145px !important;
+    gap:7px !important;
+  }
+}
+
+/* =========================================================
+   ARGAMES MOBILE UI — matches the approved mobile preview
+   ========================================================= */
+.mobile-menu-btn{display:none}
+
+.mobile-backdrop{
+  display:none;
+  position:fixed;
+  inset:0;
+  z-index:90;
+  background:rgba(0,0,0,.68);
+  backdrop-filter:blur(3px);
+}
+
+/* Phone/tablet */
+@media (max-width:760px){
+  body{
+    background:
+      radial-gradient(circle at 80% 25%,rgba(60,255,80,.055),transparent 28%),
+      #050807 !important;
+  }
+
+  header.top{
+    position:sticky !important;
+    top:0 !important;
+    z-index:100 !important;
+    height:72px !important;
+    min-height:72px !important;
+    padding:9px 14px !important;
+    display:flex !important;
+    align-items:center !important;
+    justify-content:space-between !important;
+    gap:8px !important;
+    background:rgba(4,8,6,.96) !important;
+    border-bottom:1px solid rgba(98,255,88,.15) !important;
+    backdrop-filter:blur(12px);
+  }
+
+  .brand{
+    width:154px !important;
+    max-width:42vw !important;
+    flex:0 0 auto !important;
+  }
+  .brand img{width:100% !important;height:auto !important}
+
+  .topnav{display:none !important}
+
+  .tools{
+    display:flex !important;
+    align-items:center !important;
+    justify-content:flex-end !important;
+    gap:6px !important;
+    min-width:0 !important;
+    flex:1 !important;
+  }
+
+  .search{
+    width:44px !important;
+    height:44px !important;
+    min-width:44px !important;
+    padding:0 !important;
+    border-radius:14px !important;
+    justify-content:center !important;
+    overflow:hidden !important;
+    cursor:pointer;
+  }
+  .search span{
+    font-size:25px !important;
+    line-height:1 !important;
+  }
+  .search input{
+    display:none !important;
+  }
+  .search.mobile-search-open{
+    width:min(170px,42vw) !important;
+    justify-content:flex-start !important;
+    padding:0 10px !important;
+  }
+  .search.mobile-search-open input{
+    display:block !important;
+    width:100% !important;
+    min-width:0 !important;
+  }
+
+  .langbox button{
+    height:44px !important;
+    padding:0 12px !important;
+    border-radius:14px !important;
+    font-size:14px !important;
+    white-space:nowrap !important;
+  }
+
+  .mobile-menu-btn{
+    display:flex !important;
+    width:44px !important;
+    height:44px !important;
+    align-items:center !important;
+    justify-content:center !important;
+    border:1px solid rgba(105,255,78,.25) !important;
+    border-radius:14px !important;
+    background:#09100c !important;
+    color:#70ff4f !important;
+    font-size:23px !important;
+    cursor:pointer !important;
+  }
+
+  
+
+  main#home{
+    display:flex !important;
+    flex-direction:column !important;
+    width:100% !important;
+    max-width:none !important;
+    margin:0 !important;
+    padding:0 12px 35px !important;
+    gap:0 !important;
+  }
+
+  /* Hero comes first on mobile. */
+  .content{
+    order:1 !important;
+    width:100% !important;
+    min-width:0 !important;
+    display:flex !important;
+    flex-direction:column !important;
+  }
+
+  .hero{
+    order:1 !important;
+    width:100% !important;
+    height:245px !important;
+    min-height:245px !important;
+    margin:0 0 18px !important;
+    border-radius:22px !important;
+    overflow:hidden !important;
+  }
+
+  .hero-copy{
+    position:relative !important;
+    z-index:3 !important;
+    width:64% !important;
+    padding:34px 20px !important;
+  }
+  .hero-copy>span{
+    font-size:12px !important;
+    letter-spacing:4px !important;
+  }
+  .hero h1{
+    font-size:44px !important;
+    line-height:.95 !important;
+    letter-spacing:-2px !important;
+    margin:8px 0 !important;
+  }
+  .hero-copy p{
+    font-size:14px !important;
+    margin:7px 0 17px !important;
+  }
+  .hero-buttons{
+    display:flex !important;
+    flex-direction:column !important;
+    align-items:flex-start !important;
+    gap:8px !important;
+  }
+  .hero-buttons a{
+    min-height:42px !important;
+    padding:10px 14px !important;
+    border-radius:13px !important;
+    font-size:12px !important;
+  }
+  .hero-art{
+    position:absolute !important;
+    inset:0 !important;
+  }
+  .hero-game-image{
+    width:52% !important;
+    height:100% !important;
+    right:-7% !important;
+    object-fit:cover !important;
+    opacity:.8 !important;
+  }
+  .hero-logo{
+    width:35% !important;
+    right:24% !important;
+    opacity:.55 !important;
+  }
+
+  /* Keep SEO useful but compact. */
+  .seo-intro{
+    order:2 !important;
+    margin:0 0 16px !important;
+    padding:14px !important;
+    border-radius:18px !important;
+  }
+  .seo-intro h2{
+    font-size:21px !important;
+    line-height:1.15 !important;
+  }
+  .seo-intro p{
+    font-size:12px !important;
+    line-height:1.6 !important;
+  }
+  .seo-category-links{
+    gap:6px !important;
+  }
+  .seo-category-links a{
+    font-size:11px !important;
+    padding:7px 10px !important;
+  }
+
+  .inline-ad{
+    order:3 !important;
+    margin:7px 0 18px !important;
+    min-height:70px !important;
+  }
+
+  #popular{
+    order:4 !important;
+    width:100% !important;
+  }
+
+  .section-head{
+    align-items:flex-end !important;
+    margin-bottom:12px !important;
+  }
+  .section-head h2{
+    font-size:28px !important;
+    line-height:1 !important;
+    margin:0 !important;
+  }
+  .catalog-sub{
+    font-size:12px !important;
+    line-height:1.4 !important;
+    margin-top:8px !important;
+  }
+  .view-all{
+    padding:10px 12px !important;
+    border-radius:13px !important;
+    white-space:nowrap !important;
+  }
+
+  #popularGrid.mosaic-grid{
+    width:100% !important;
+    display:grid !important;
+    grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+    grid-auto-rows:145px !important;
+    grid-auto-flow:dense !important;
+    gap:8px !important;
+  }
+
+  #popularGrid.mosaic-grid .card{
+    width:auto !important;
+    min-width:0 !important;
+    border-radius:17px !important;
+    overflow:hidden !important;
+  }
+  #popularGrid.mosaic-grid .card.tile-wide{
+    grid-column:span 2 !important;
+    grid-row:span 1 !important;
+  }
+  #popularGrid.mosaic-grid .card.tile-tall{
+    grid-column:span 1 !important;
+    grid-row:span 2 !important;
+  }
+  #popularGrid.mosaic-grid .card.tile-feature{
+    grid-column:span 2 !important;
+    grid-row:span 2 !important;
+  }
+  #popularGrid.mosaic-grid .card .thumb{
+    width:100% !important;
+    height:100% !important;
+    min-height:0 !important;
+  }
+  #popularGrid.mosaic-grid .card .thumb img{
+    width:100% !important;
+    height:100% !important;
+    object-fit:cover !important;
+  }
+  #popularGrid.mosaic-grid .card .hover-name{
+    opacity:1 !important;
+    transform:none !important;
+    bottom:0 !important;
+    left:0 !important;
+    right:0 !important;
+    padding:26px 10px 9px !important;
+    font-size:12px !important;
+    background:linear-gradient(transparent,rgba(0,0,0,.85)) !important;
+  }
+
+  .pagination{
+    display:flex !important;
+    justify-content:center !important;
+    flex-wrap:wrap !important;
+    gap:6px !important;
+    margin:18px 0 10px !important;
+  }
+
+  #new,#multiplayer,#top{
+    margin-top:24px !important;
+  }
+  #newGrid,#multiGrid,#topGrid{
+    display:grid !important;
+    grid-template-columns:repeat(2,minmax(0,1fr)) !important;
+    gap:8px !important;
+  }
+
+  .sidebar{
+    order:3 !important;
+    display:none !important;
+    position:fixed !important;
+    z-index:110 !important;
+    top:0 !important;
+    left:0 !important;
+    bottom:0 !important;
+    width:min(330px,86vw) !important;
+    height:100dvh !important;
+    max-height:none !important;
+    overflow-y:auto !important;
+    border-radius:0 22px 22px 0 !important;
+    margin:0 !important;
+    padding:22px 14px !important;
+    background:#070c09 !important;
+    box-shadow:18px 0 60px rgba(0,0,0,.7) !important;
+  }
+  .sidebar.mobile-open{display:block !important}
+  .mobile-backdrop.mobile-open{display:block !important}
+
+  .side-brand{margin-bottom:18px !important}
+  .side-menu.primary-menu{display:grid !important;grid-template-columns:1fr !important}
+  #catList{
+    display:grid !important;
+    grid-template-columns:1fr !important;
+    max-height:none !important;
+    overflow:visible !important;
+  }
+  .cat{
+    min-height:46px !important;
+    font-size:13px !important;
+  }
+
+  .right-rail{display:none !important}
+  .side-ad,.stats{display:none !important}
+
+  .bottom-ad{
+    min-height:70px !important;
+    margin-top:18px !important;
+  }
+
+  footer{
+    margin-top:0 !important;
+    padding:22px 12px 30px !important;
+    text-align:center !important;
+    font-size:11px !important;
+  }
+}
+
+/* Very small phones */
+@media (max-width:430px){
+  header.top{height:66px !important;min-height:66px !important;padding:8px 10px !important}
+  .brand{width:137px !important}
+  .langbox button{padding:0 9px !important}
+  .mobile-menu-btn,.search{width:40px !important;height:40px !important;min-width:40px !important}
+  
+  main#home{padding-left:9px !important;padding-right:9px !important}
+  .hero{height:225px !important;min-height:225px !important}
+  .hero-copy{padding:28px 16px !important}
+  .hero h1{font-size:39px !important}
+  .hero-buttons a{font-size:11px !important;padding:9px 11px !important}
+  #popularGrid.mosaic-grid,#newGrid,#multiGrid,#topGrid{
+    gap:7px !important;
+  }
+  #popularGrid.mosaic-grid{grid-auto-rows:135px !important}
+}
+
+/* ===== AR CRAZYGAMES FINAL MOBILE / SQUARE GAMES ===== */
+.card,
+.card.tile-wide,
+.card.tile-tall,
+.card.tile-feature,
+.card.tile-normal,
+.card.tile-square{
+  grid-column:span 1 !important;
+  grid-row:span 1 !important;
+  aspect-ratio:auto !important;
+}
+.card .thumb,
+.mosaic-grid .card .thumb{
+  width:100%;
+  aspect-ratio:1 / 1 !important;
+  height:auto !important;
+  min-height:0 !important;
+}
+.mosaic-grid .card .thumb img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+.grid{
+  grid-auto-flow:row;
+}
+@media(max-width:760px){
+  /* First viewport contains the site/game content, never an ad. */
+  
+  main#home{display:block !important}
+  .content{width:100%;min-width:0}
+  .grid{grid-template-columns:repeat(2,minmax(0,1fr)) !important;gap:9px !important}
+  .card{width:100%;min-width:0}
+  .card .thumb{aspect-ratio:1/1 !important}
+  .section{margin-top:28px}
+}
+@media(max-width:360px){
+  .grid{gap:7px !important}
+}
+
+
+
+/* AR CRAZYGAMES — external rotating light frame */
+.game-card,
+.card,
+.cat-game {
+  position: relative;
+  isolation: isolate;
+}
+
+.game-card::before,
+.card::before,
+.cat-game::before {
+  content: "";
+  position: absolute;
+  inset: -3px;
+  z-index: -1;
+  border-radius: inherit;
+  padding: 2px;
+  background: conic-gradient(
+    from 0deg,
+    transparent 0deg,
+    transparent 235deg,
+    rgba(83,255,67,.08) 255deg,
+    rgba(83,255,67,.95) 285deg,
+    rgba(153,255,121,.55) 305deg,
+    transparent 330deg,
+    transparent 360deg
+  );
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0;
+  transform: scale(.985);
+  transition: opacity .25s ease, transform .25s ease;
+  animation: arcg-rotate-light 1.8s linear infinite;
+  animation-play-state: paused;
+  pointer-events: none;
+}
+
+.game-card:hover::before,
+.card:hover::before,
+.cat-game:hover::before {
+  opacity: 1;
+  transform: scale(1.01);
+  animation-play-state: running;
+}
+
+.game-card:hover,
+.card:hover,
+.cat-game:hover {
+  transform: translateY(-3px);
+  transition: transform .25s ease, filter .25s ease;
+  filter: drop-shadow(0 0 10px rgba(83,255,67,.22));
+}
+
+@keyframes arcg-rotate-light {
+  to { transform: scale(1.01) rotate(360deg); }
+}
+
+@media (hover:none), (pointer:coarse) {
+  .game-card::before,
+  .card::before,
+  .cat-game::before {
+    display: none;
+  }
+}
+
+/* =========================================================
+   AR CRAZYGAMES — REMARKABLE SHINE HOVER
+   No card rotation / orbit / turning effect.
+   Hovering a game produces a strong neon shine around the
+   outside edge of the game picture only.
+   ========================================================= */
+.card,
+.mosaic-grid .card,
+#popularGrid.mosaic-grid .card{
+  transform:none !important;
+  transition:border-color .22s ease, box-shadow .22s ease, filter .22s ease !important;
+}
+
+/* Disable the previous moving/orbiting border lights. */
+.card:before,
+.card:after,
+.mosaic-grid .card:before,
+.mosaic-grid .card:after,
+#popularGrid.mosaic-grid .card:before,
+#popularGrid.mosaic-grid .card:after{
+  animation:none !important;
+  opacity:0 !important;
+  display:none !important;
+}
+
+.card:hover,
+.mosaic-grid .card:hover,
+#popularGrid.mosaic-grid .card:hover{
+  transform:none !important;
+  border-color:#72ff58 !important;
+  filter:brightness(1.04) saturate(1.08);
+  animation:gameNeonShine 1.25s ease-in-out infinite alternate;
+  z-index:10;
+}
+
+/* A crisp luminous frame outside the thumbnail. */
+.card:hover .thumb,
+.mosaic-grid .card:hover .thumb,
+#popularGrid.mosaic-grid .card:hover .thumb{
+  box-shadow:
+    0 0 0 1px #78ff5d,
+    0 0 7px #72ff58,
+    0 0 18px #58ff4d,
+    0 0 34px #58ff4d66;
+}
+
+/* Keep the artwork itself stable — no zoom/turning. */
+.card:hover .thumb img,
+.mosaic-grid .card:hover .thumb img,
+#popularGrid.mosaic-grid .card:hover .thumb img{
+  transform:none !important;
+  filter:brightness(1.08) saturate(1.12) !important;
+}
+
+@keyframes gameNeonShine{
+  0%{
+    box-shadow:
+      0 0 0 1px #4fbb45,
+      0 0 7px #4fbb45,
+      0 0 16px #4fbb453d;
+  }
+  100%{
+    box-shadow:
+      0 0 0 2px #8cff72,
+      0 0 13px #72ff58,
+      0 0 32px #58ff4d99,
+      0 0 52px #58ff4d45;
+  }
+}
+
+@media (prefers-reduced-motion: reduce){
+  .card:hover,
+  .mosaic-grid .card:hover,
+  #popularGrid.mosaic-grid .card:hover{
+    animation:none !important;
+  }
+}
+
+/* ===== FINAL SMALL FIX: HERO CTA + GAME IMAGE HOVER ===== */
+.hero-buttons{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  flex-wrap:wrap;
+}
+.hero-buttons a{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:5px;
+  min-height:38px;
+  padding:9px 14px;
+  border-radius:9px;
+  text-decoration:none;
+  font:700 11px Outfit, sans-serif;
+  line-height:1;
+  transition:transform .22s ease,box-shadow .22s ease,filter .22s ease;
+}
+.hero-buttons a:hover{
+  transform:translateY(-2px);
+}
+
+/* Keep the existing outside shine; add only the requested image zoom. */
+.card .thumb img{
+  transition:transform .38s cubic-bezier(.2,.7,.2,1),filter .38s ease;
+}
+.card:hover .thumb img{
+  transform:scale(1.08);
+  filter:brightness(1.08) saturate(1.18);
+}
+#popularGrid.mosaic-grid .card:hover .thumb img{
+  transform:scale(1.08);
+}
+
+
+/* =========================================================
+   AR CRAZYGAMES ADS
+   Responsive placements. Never placed in the site header and
+   never allowed to alter the game frame dimensions.
+   ========================================================= */
+.site-ad{
+  position:relative;
+  z-index:2;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  width:100%;
+  max-width:100%;
+  min-height:0;
+  margin:16px auto;
+  overflow:hidden;
+  border-radius:12px;
+  background:rgba(7,12,9,.55);
+}
+.site-ad iframe{max-width:100%;border:0}
+.ad-row{
+  width:100%;
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  justify-content:center;
+  gap:12px;
+  margin:16px 0;
+}
+.ad-row .site-ad{flex:0 0 auto;margin:0}
+.banner-ad{
+  min-height:var(--ad-h);
+  width:var(--ad-w);
+  max-width:100%;
+}
+.banner-ad.banner-468x60{min-height:60px}
+.banner-ad.banner-320x50{min-height:50px}
+.banner-ad.banner-300x250{min-height:250px}
+.banner-ad.banner-160x300{min-height:300px}
+.banner-ad.banner-160x600{min-height:600px}
+.native-ad{
+  min-height:180px;
+  width:min(100%,620px);
+  padding:8px;
+  background:transparent;
+}
+.native-ad .native-mount{
+  width:100%;
+  min-height:160px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+}
+.right-rail .site-ad{
+  width:160px;
+  margin:12px auto;
+  flex:0 0 auto;
+}
+.right-rail .native-ad{width:100%;min-height:180px}
+.category-ads-top,.category-ads-bottom,
+.game-ads-after,.game-ads-info,.game-ads-related{clear:both}
+.game-ads-after{
+  max-width:780px;
+  margin:14px auto 0;
+}
+.game-ads-info,.game-ads-related{max-width:1180px;margin:16px auto}
+@media(max-width:900px){
+  .right-rail .banner-160x300,
+  .right-rail .banner-160x600{display:none}
+  .right-rail .site-ad{width:100%}
+}
+@media(max-width:760px){
+  .ad-row{gap:8px;margin:12px 0}
+  .banner-468x60{display:none}
+  .banner-320x50{display:flex;min-height:50px}
+  .banner-300x250{min-height:250px}
+  .native-ad{min-height:160px;width:100%;padding:4px}
+  .native-ad .native-mount{min-height:140px}
+  .game-ads-after{max-width:100%}
+  .game-ads-info,.game-ads-related{width:100%}
+}
+@media(max-width:360px){
+  .banner-320x50{transform:scale(.94);transform-origin:center}
+}
