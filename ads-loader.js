@@ -71,6 +71,19 @@
     target.appendChild(bannerAd(kind));
   }
 
+  function addAllAds(target, verticalCount=10) {
+    if (!target) return;
+    const row = document.createElement("div");
+    row.className = "ad-row all-ads-row";
+    addBanner(row, "b468");
+    addBanner(row, "b320");
+    addBanner(row, "b300");
+    addBanner(row, "b160x300");
+    for (let i = 0; i < verticalCount; i++) addBanner(row, "b160x600");
+    addNative(row);
+    target.appendChild(row);
+  }
+
   function pageAds() {
     const path = location.pathname.replace(/\/+$/,"/");
     const isGame = /\/game\/game\.html$/i.test(path);
@@ -78,47 +91,27 @@
     const isHome = /\/(?:index\.html)?$/i.test(path);
 
     if (isHome) {
-      const content = document.querySelector("#home .content");
-      const hero = document.querySelector("#home .hero");
-      const popular = document.querySelector("#popular");
-      const right = document.querySelector("#home .right-rail");
-      if (hero) {
-        const row = document.createElement("div");
-        row.className = "ad-row after-hero-ads";
-        addNative(row);
-        addBanner(row, "b468");
-        addBanner(row, "b320");
-        hero.after(row);
-      }
-      if (popular) {
-        const row = document.createElement("div");
-        row.className = "ad-row section-ads";
-        addBanner(row, "b300");
-        addNative(row);
-        popular.appendChild(row);
-      }
-      if (right) {
-        addBanner(right, "b160x300");
-        addBanner(right, "b160x600");
-      }
+      // IMPORTANT: no ad is inserted before the first game sections.
+      // The gamer sees the site and games first; ads start after NEW GAMES.
+      const newGames = document.querySelector("#new");
+      const multi = document.querySelector("#multiplayer");
+      const top = document.querySelector("#top");
+      if (newGames) addAllAds(newGames, 4);
+      if (multi) addAllAds(multi, 3);
+      if (top) addAllAds(top, 3);
     }
 
     if (isCategory) {
       const main = document.querySelector("main.cat-page");
-      const grid = document.querySelector(".cat-grid");
-      const intro = main?.querySelector("p");
-      if (main && intro) {
-        const row = document.createElement("div");
-        row.className = "ad-row category-ads-top";
-        addNative(row);
-        addBanner(row, "b468");
-        addBanner(row, "b320");
-        intro.after(row);
-      }
+      const grid = document.querySelector(".cat-grid, .mosaic-grid");
       if (main && grid) {
         const row = document.createElement("div");
-        row.className = "ad-row category-ads-bottom";
+        row.className = "ad-row category-ads-after-games";
+        addBanner(row, "b468");
+        addBanner(row, "b320");
         addBanner(row, "b300");
+        addBanner(row, "b160x300");
+        for (let i = 0; i < 10; i++) addBanner(row, "b160x600");
         addNative(row);
         grid.after(row);
       }
@@ -129,26 +122,31 @@
       const shell = document.querySelector("#shell");
       const info = document.querySelector("#infoGrid");
       const related = document.querySelector("#related");
+      // Game is always first. Ads begin only after the playable game area.
       if (main && shell) {
         const row = document.createElement("div");
         row.className = "ad-row game-ads-after";
-        addBanner(row, "b300");
         addBanner(row, "b468");
         addBanner(row, "b320");
+        addBanner(row, "b300");
+        addBanner(row, "b160x300");
+        for (let i = 0; i < 10; i++) addBanner(row, "b160x600");
         addNative(row);
         shell.closest(".play-left")?.appendChild(row) || main.appendChild(row);
+      } else if (main) {
+        addAllAds(main, 10);
       }
       if (main && info) {
         const row = document.createElement("div");
         row.className = "ad-row game-ads-info";
         addBanner(row, "b300");
-        addNative(row);
+        addBanner(row, "b320");
         info.after(row);
       }
       if (main && related) {
         const row = document.createElement("div");
         row.className = "ad-row game-ads-related";
-        addBanner(row, "b320");
+        addBanner(row, "b468");
         related.after(row);
       }
     }

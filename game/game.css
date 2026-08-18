@@ -556,3 +556,59 @@ footer{text-align:center;border-top:1px solid var(--line);padding:20px;color:#64
 @media(max-width:360px){
   .banner-320x50{transform:scale(.94);transform-origin:center}
 }
+
+
+/* AR CRAZYGAMES mobile header + full ad placement fix */
+@media (max-width:760px){
+  header.top .brand{
+    width:auto !important;
+    max-width:none !important;
+    min-width:0 !important;
+    flex:1 1 auto !important;
+    overflow:hidden !important;
+    gap:6px !important;
+  }
+  header.top .brand .brand-mark{
+    width:38px !important;
+    height:42px !important;
+    flex:0 0 38px !important;
+  }
+  header.top .brand > span{
+    min-width:0 !important;
+    overflow:hidden !important;
+    text-overflow:ellipsis !important;
+    white-space:nowrap !important;
+    font-size:16px !important;
+    letter-spacing:-.5px !important;
+  }
+  header.top .tools{
+    flex:0 0 auto !important;
+    min-width:0 !important;
+  }
+  .all-ads-row{
+    width:100% !important;
+    max-width:100% !important;
+    box-sizing:border-box !important;
+    overflow:hidden !important;
+  }
+  .all-ads-row .banner-468x60{
+    display:flex !important;
+    transform:scale(.68);
+    transform-origin:center;
+    margin-left:-15%;
+    margin-right:-15%;
+  }
+  .all-ads-row .banner-160x600{
+    flex:0 0 160px !important;
+  }
+  .all-ads-row .banner-160x300{flex:0 0 160px !important}
+  .all-ads-row .banner-300x250{flex:0 0 300px !important}
+  .all-ads-row .banner-320x50{flex:0 0 320px !important}
+}
+@media (max-width:390px){
+  header.top .brand .brand-mark{width:34px !important;height:38px !important;flex-basis:34px !important}
+  header.top .brand > span{font-size:14px !important}
+  .all-ads-row .banner-468x60{transform:scale(.60);margin-left:-20%;margin-right:-20%}
+  .all-ads-row .banner-320x50{transform:scale(.92);margin-left:-4%;margin-right:-4%}
+  .all-ads-row .banner-300x250{transform:scale(.90);margin-left:-5%;margin-right:-5%}
+}
