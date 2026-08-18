@@ -1226,3 +1226,156 @@ body:not(.category-page) #popular{
   .all-ads-row .banner-320x50{transform:scale(.92);margin-left:-4%;margin-right:-4%}
   .all-ads-row .banner-300x250{transform:scale(.90);margin-left:-5%;margin-right:-5%}
 }
+
+/* =========================================================
+   AR CRAZYGAMES — FINAL AD IFRAME + MOBILE HEADER FIX
+   ========================================================= */
+.site-ad .isolated-ad-frame,
+.site-ad .isolated-native-frame{
+  display:block !important;
+  border:0 !important;
+  padding:0 !important;
+  margin:0 !important;
+  background:transparent !important;
+  max-width:100% !important;
+}
+.site-ad.banner-ad{
+  overflow:hidden !important;
+  box-sizing:border-box !important;
+}
+.site-ad.native-ad{
+  min-height:320px !important;
+  width:min(320px,100%) !important;
+  padding:0 !important;
+  overflow:hidden !important;
+  background:transparent !important;
+}
+.ad-row.all-ads-row,
+.ad-row.extra-ads-row{
+  width:100% !important;
+  box-sizing:border-box !important;
+  align-items:flex-start !important;
+  justify-content:center !important;
+  overflow:hidden !important;
+}
+.all-ads-row .banner-160x600{
+  flex:0 0 160px !important;
+  width:160px !important;
+  min-height:600px !important;
+}
+.all-ads-row .banner-160x300{
+  flex:0 0 160px !important;
+  width:160px !important;
+}
+.all-ads-row .banner-300x250{
+  flex:0 0 300px !important;
+  width:300px !important;
+}
+.all-ads-row .banner-320x50{
+  flex:0 0 320px !important;
+  width:320px !important;
+}
+.all-ads-row .banner-468x60{
+  flex:0 0 468px !important;
+  width:468px !important;
+}
+
+@media (max-width:760px){
+  /* Keep the site title fully visible while retaining search/language/menu. */
+  header.top .brand{
+    width:162px !important;
+    max-width:none !important;
+    flex:0 0 162px !important;
+    min-width:0 !important;
+    overflow:visible !important;
+    gap:5px !important;
+  }
+  header.top .brand .brand-mark{
+    width:37px !important;
+    height:40px !important;
+    flex:0 0 37px !important;
+  }
+  header.top .brand > span{
+    display:block !important;
+    min-width:0 !important;
+    max-width:120px !important;
+    overflow:visible !important;
+    text-overflow:clip !important;
+    white-space:nowrap !important;
+    font-size:15px !important;
+    letter-spacing:-.7px !important;
+  }
+  header.top .tools{
+    flex:1 1 auto !important;
+    min-width:0 !important;
+    gap:5px !important;
+    justify-content:flex-end !important;
+  }
+  header.top .search,
+  header.top .mobile-menu-btn{
+    width:40px !important;
+    min-width:40px !important;
+    height:40px !important;
+    flex:0 0 40px !important;
+  }
+  header.top .langbox{flex:0 0 auto !important}
+  header.top .langbox > button{
+    height:40px !important;
+    min-width:72px !important;
+    padding:0 7px !important;
+    font-size:12px !important;
+    white-space:nowrap !important;
+  }
+
+  /* Never hide any requested ad format on phones. */
+  .all-ads-row .banner-468x60{
+    display:flex !important;
+    flex:0 0 468px !important;
+    width:468px !important;
+    transform:scale(.70) !important;
+    transform-origin:center !important;
+    margin-left:-70px !important;
+    margin-right:-70px !important;
+  }
+  .all-ads-row .banner-320x50,
+  .all-ads-row .banner-300x250,
+  .all-ads-row .banner-160x300,
+  .all-ads-row .banner-160x600,
+  .all-ads-row .native-ad{
+    display:flex !important;
+  }
+  .all-ads-row .banner-160x600{
+    flex-basis:160px !important;
+    width:160px !important;
+    min-height:600px !important;
+  }
+  .all-ads-row .native-ad{
+    flex:0 0 min(320px,100%) !important;
+  }
+  .ad-row{max-width:100% !important}
+}
+
+@media (max-width:430px){
+  header.top .brand{
+    width:150px !important;
+    flex-basis:150px !important;
+  }
+  header.top .brand .brand-mark{
+    width:34px !important;
+    height:37px !important;
+    flex-basis:34px !important;
+  }
+  header.top .brand > span{
+    font-size:14px !important;
+    max-width:112px !important;
+  }
+  header.top .langbox > button{
+    min-width:68px !important;
+    padding:0 5px !important;
+  }
+  .all-ads-row .banner-468x60{
+    transform:scale(.60) !important;
+    margin-left:-94px !important;
+    margin-right:-94px !important;
+  }
+}
