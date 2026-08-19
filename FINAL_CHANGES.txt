@@ -1,0 +1,6 @@
+AR CRAZYGAMES final cleanup
+- Removed ad spaces/placeholders from all HTML pages, including /game pages.
+- Removed ad manager/push ad references from the site build.
+- Replaced previous hover effect with an external rotating light frame around game cards.
+- Did not modify game iframe URLs, game loader logic, games.js, or games.json.
+- Hover effect is disabled on touch devices.
