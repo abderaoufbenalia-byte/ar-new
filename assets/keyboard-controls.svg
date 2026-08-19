@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 270">
+<defs><linearGradient id="g" x1="0" x2="1"><stop stop-color="#0c1710"/><stop offset="1" stop-color="#111b14"/></linearGradient></defs>
+<rect x="3" y="3" width="754" height="264" rx="22" fill="url(#g)" stroke="#26362b" stroke-width="3"/>
+<text x="30" y="42" fill="#6dff52" font-family="Arial" font-size="20" font-weight="700">KEYBOARD &amp; MOUSE</text>
+<g font-family="Arial" font-size="15" text-anchor="middle" font-weight="700">
+ <g fill="#17221a" stroke="#4d9a4d" stroke-width="2">
+  <rect x="55" y="75" width="48" height="40" rx="7"/><rect x="109" y="75" width="48" height="40" rx="7"/><rect x="163" y="75" width="48" height="40" rx="7"/>
+  <rect x="109" y="121" width="48" height="40" rx="7"/>
+  <rect x="55" y="121" width="48" height="40" rx="7"/><rect x="163" y="121" width="48" height="40" rx="7"/>
+  <rect x="55" y="167" width="156" height="40" rx="7"/>
+ </g>
+ <g fill="#6dff52"><text x="79" y="100">A</text><text x="133" y="100">W</text><text x="187" y="100">D</text><text x="133" y="146">S</text><text x="79" y="146">←</text><text x="187" y="146">→</text><text x="133" y="192">SPACE</text></g>
+ <g fill="#17221a" stroke="#4d9a4d" stroke-width="2"><rect x="258" y="75" width="48" height="40" rx="7"/><rect x="312" y="75" width="48" height="40" rx="7"/><rect x="366" y="75" width="48" height="40" rx="7"/></g>
+ <g fill="#6dff52"><text x="282" y="100">F</text><text x="336" y="100">ESC</text><text x="390" y="100">E</text></g>
+ <g fill="#17221a" stroke="#4d9a4d" stroke-width="2"><rect x="258" y="121" width="156" height="86" rx="12"/></g>
+ <g fill="#dbe6dc"><text x="336" y="155">🖱</text><text x="336" y="181" font-size="12">MOUSE / TOUCH</text></g>
+</g>
+<g font-family="Arial" font-size="12" fill="#91a094"><text x="465" y="91">WASD / ARROWS</text><text x="465" y="111">Move / Drive</text><text x="465" y="139">SPACE</text><text x="465" y="159">Jump / Action</text><text x="465" y="187">F</text><text x="465" y="207">Fullscreen</text><text x="610" y="139">E / MOUSE</text><text x="610" y="159">Interact / Aim</text><text x="610" y="187">ESC</text><text x="610" y="207">Exit fullscreen</text></g>
+</svg>
