@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Play Free Online Game | ARGAMES</title>
+<meta name="description" content="Play free online games on ARGAMES. View controls, game information and related games.">
+<meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1,max-video-preview:-1">
+<link id="canonical" rel="canonical" href="https://argames-dz.online/game/game.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="ARGAMES">
+<meta property="og:title" content="Play Free Online Game | ARGAMES">
+<meta property="og:description" content="Play this free browser game on ARGAMES.">
+<meta property="og:image" content="https://argames-dz.online/assets/argames-horizontal.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Play Free Online Game | ARGAMES">
+<meta name="twitter:description" content="Play free browser games on ARGAMES.">
+<meta name="twitter:image" content="https://argames-dz.online/assets/argames-horizontal.png"><link rel="icon" type="image/png" href="../assets/favicon.png"><link rel="apple-touch-icon" href="../assets/favicon.png"><link rel="stylesheet" href="game.css"></head>
+<body>
+<div id="mobileUnsupported" class="mobile-unsupported" aria-hidden="true">
+  <div class="unsupported-card">
+    <div class="unsupported-icon">📱</div>
+    <h2>Not available on mobile</h2>
+    <p>This game is not marked as mobile-compatible by its game provider, so we hid it from the mobile catalog.</p>
+    <a href="../index.html">← Back to mobile games</a>
+  </div>
+</div>
+<div id="rotateOverlay" class="rotate-overlay" aria-live="polite" aria-hidden="true">
+  <div class="rotate-card">
+    <div class="rotate-icon">📱↻</div>
+    <h2>Rotate your phone</h2>
+    <p>This game is designed for landscape mode. Turn your phone sideways to play.</p>
+  </div>
+</div>
+<header class="game-top"><a class="brand" href="../index.html"><img src="../assets/argames-horizontal.png" alt="ARGAMES"></a><div class="right"><div class="langbox"><button id="langBtn">🌐 <b id="langCode">EN</b>⌄</button><div id="langMenu" class="lang-menu"></div></div><a href="../index.html">← <span data-i18n="home">HOME</span></a></div></header>
+
+<main>
+ <div class="crumb">ARGAMES / <span id="crumb">GAME</span></div>
+ <div class="title-row"><div><div class="eyebrow" data-i18n="now">NOW PLAYING</div><h1 id="title"></h1><div id="meta"></div><div id="gameTags" class="game-tags"></div></div><a id="provider" target="_blank" rel="noopener">↗ <span data-i18n="provider">Open provider</span></a></div>
+ </div>
+
+ <section class="play-layout">
+   <div class="play-left">
+     <section class="game-shell" id="shell">
+       <div class="start" id="start"><div class="icon" id="icon">🎮</div><small>ARGAMES</small><h2 id="startTitle"></h2><p data-i18n="touch">PRESS ANY KEY OR TOUCH ANYWHERE TO START</p><button id="startBtn">▶ <span data-i18n="start">START GAME</span></button><em data-i18n="hint">F = fullscreen • ESC = exit fullscreen</em></div>
+       <iframe id="frame" allow="fullscreen; gamepad; autoplay" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe><button id="fs" title="F">⛶</button>
+     </section>
+     <div class="actions" id="actions"><button id="like">👍 <span data-i18n="like">Like</span> <b id="likes">0</b></button><button id="dislike">👎 <span data-i18n="dislike">Dislike</span> <b id="dislikes">0</b></button><button id="fs2">⛶ <span data-i18n="fullscreen">Fullscreen</span></button><a id="open" target="_blank" rel="noopener">↗ <span data-i18n="open">Open game</span></a></div>
+     <div class="shortcuts" id="shortcuts">⌨️ <b>F</b> <span data-i18n="fullscreen">Fullscreen</span> • ⎋ <b>ESC</b> <span data-i18n="exit">Exit</span> • 👆 <span data-i18n="touchGame">Touch game area to start</span></div>
+     
+   </div>
+
+   <aside class="play-right" id="playRight">
+     
+     <section class="panel controls-panel"><h2>⌨️ <span data-i18n="controls">CONTROLS TUTORIAL</span></h2><p class="easy" data-i18n="easy">Easy controls guide</p><img class="keyboard-img" src="../assets/keyboard-controls.svg" alt="Keyboard controls guide"><div id="controls"></div><p class="note" data-i18n="controlNote">Game-specific instructions are shown below when available.</p></section>
+     
+   </aside>
+ </section>
+
+ <div class="info-grid" id="infoGrid">
+   <div class="panel"><h2>🌐 <span data-i18n="type">GAME TYPE</span></h2><div id="type"></div><p id="description"></p><p class="category-line"><strong>Category:</strong> <a id="categoryLink" href="../index.html">All Games</a></p></div>
+   
+ </div>
+ <section class="related panel" id="related" aria-labelledby="related-title"><h2 id="related-title">🎮 More Games Like This</h2><div id="relatedGames" class="related-grid"></div></section>
+ </div>
+ <div class="interstitial" id="inter"><button id="close">×</button></div>
+</main>
+<footer>© 2026 ARGAMES — <span data-i18n="footer">Free game portal</span>
+</div>
+</footer>
+<script type="application/ld+json" id="game-schema">{}</script>
+<script src="../games.js"></script><script src="game.js"></script>
+<script src="../ads-loader.js"></script>
+</body></html>
